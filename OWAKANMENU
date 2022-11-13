@@ -1,0 +1,169 @@
+/**
+* Name: Jamaica Rose C. Owakan
+* Section: BSINDTECH 4- FIDELITY
+* Year: 4th Year
+*/
+
+
+
+import java.util.Scanner;
+public class Eatery{
+    public static void main(String[] args) {
+
+        Scanner a = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
+        int menu = 0, snacks = 0, Drinks = 0, condition = 0, price = 0, total = 0;
+
+        System.out.println("Welcome, Do you want to order?");
+        String answer = userInput.nextLine();
+        int again;
+
+        if (answer.equalsIgnoreCase("YES")) {
+            again = 1;
+            System.out.println("1. Menu\n2. Snacks\n3. Drinks");
+
+            int order = userInput.nextInt();
+
+            do {
+                
+                
+                System.out.println(" Menu: ");
+
+                System.out.println(" ");
+                System.out.println(" 1 - Pork Adobo - 85.00");
+                System.out.println(" 2 - Pancit  - 80.00");
+                System.out.println(" 3 - Pork Guisado - 70.00");
+                System.out.println(" 4 - Fish Filet- 60.00");
+                System.out.println(" 5 - Grill Checkin- 90.00");
+                System.out.print("Choose your prefered order: ");
+                menu = a.nextInt();
+                System.out.println(" ");
+
+
+                System.out.println(" Snacks: ");
+                System.out.println(" ");
+                System.out.println(" 1 - Fries - 40.00");
+                System.out.println(" 2 - Burger - 55.00");
+                System.out.println(" 3 - Waffle - 30.00");
+                System.out.print("Choose your prefered snacks: ");
+                snacks = a.nextInt();
+                System.out.println(" ");
+
+
+                System.out.println("Drinks: ");
+                System.out.println(" ");
+                System.out.println(" 1 - Fruit Shake - 80.00");
+                System.out.println(" 2 - Iced Coffee - 60.00");
+                System.out.println(" 3 - Softdrinks (Coke) - 30.00");
+                System.out.println(" 4 - Water - 25.00");
+                System.out.println(" ");
+                System.out.print("Choose your prefered Drinks: ");
+                Drinks = a.nextInt();
+                System.out.println(" ");
+
+
+                switch (menu) {
+
+                    case 1: {
+                        price = 85;
+                        total = price + total;
+                        System.out.println("You ordered: Pork Adobo" + " - " + price);
+                        break;
+                    }
+                    case 2: {
+                        price = 80;
+                        total = price + total;
+                        System.out.println("You ordered: Pancit " + " - " + price);
+                        break;
+                    }
+                    case 3: {
+                        price = 70;
+                        total = price + total;
+                        System.out.println("You ordered: Pork Guisado" + " - " + price);
+                        break;
+                    }
+                    case 4: {
+                        price = 60;
+                        total = price + total;
+                        System.out.println("You ordered: Fish Filet" + " - " + price);
+                        break;
+                    }
+                    case 5: {
+                        price = 90;
+                        total = price + total;
+                        System.out.println("You ordered: Grill Chicken" + " - " + price);
+                        break;
+                    }
+
+                }
+
+
+                switch (snacks) {
+
+                    case 1: {
+                        price = 40;
+                        total = price + total;
+                        System.out.println("You ordered: Fries" + " - " + price);
+                        break;
+                    }
+                    case 2: {
+                        price = 55;
+                        total = price + total;
+                        System.out.println("You ordered: Burger" + " - " + price);
+                        break;
+                    }
+                    case 3: {
+                        price = 30;
+                        total = price + total;
+                        System.out.println("You ordered: Waffle" + " - " + price);
+                        break;
+                    }
+
+                }
+
+
+                switch (Drinks) {
+
+                    case 1: {
+                        price = 80;
+                        total = price + total;
+                        System.out.println("You ordered: Fruit Shake" + " - " + price);
+                        break;
+                    }
+                    case 2: {
+                        price = 60;
+                        total = price + total;
+                        System.out.println("You ordered: Iced Coffee" + " - " + price);
+                        break;
+                    }
+                    case 3: {
+                        price = 30;
+                        total = price + total;
+                        System.out.println("You ordered: Softdrinks " + " - " + price);
+                        break;
+                    }
+                    case 4: {
+                        price = 25;
+                        total = price + total;
+                        System.out.println("You ordered: Water" + " - " + price);
+                    }
+                }
+
+
+
+
+                System.out.println(" ");
+                System.out.println("Total Price: " + total);
+                System.out.println(" ");
+
+                System.out.println(" Do you want to order again? 1- YES /2- NO: ");
+                condition = a.nextInt();
+                if (answer.equalsIgnoreCase("NO")) {
+            again = 1;
+                }
+            System.out.println("Goodbye, Thank you!");
+                } while (condition == 2);
+        }
+
+    }
+}
