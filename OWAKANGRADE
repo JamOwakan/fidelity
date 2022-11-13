@@ -1,0 +1,41 @@
+/**
+* Name: Jamaica Rose C. Owakan
+* Section: BSINDTECH 4-FIDELITY
+* Year: 4th year
+*/
+
+
+
+import java.util.Scanner;
+public class FINALS{
+
+    public static void main(String[] args) {
+        Scanner me = new Scanner(System.in);
+
+        String input;
+        int Result, Grades = 0, Output, TotalScore = 0;
+
+
+        do {
+            System.out.println("DO YOU WANT TO ENTER YOUR GRADE? ");
+            System.out.print("Yes or No?:");
+            input = me.nextLine();
+            Output = 0;
+           
+           
+            if (input.equalsIgnoreCase("YES")) {
+                Output += 1;
+                System.out.println("ENTER YOUR GRADE: ");
+                Result = me.nextInt();
+                me.nextLine();
+                Grades += Result;
+                TotalScore += 1;
+
+            } else if (input.equalsIgnoreCase("NO")) {
+                int Total_Averages_Grades = Grades / TotalScore;
+                Output += 0;
+                System.out.println("OVERALL AVERAGES: " + Total_Averages_Grades);
+            }
+        } while (Output == 1);
+    }
+}
